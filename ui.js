@@ -14,13 +14,13 @@ class UI {
     paint(weather) {
         //API specific here
         this.location.textContent = weather.name;
-        // this.desc.textContent = weather.weather.description;
-        this.string.textContent = weather.main.temp;
+        this.desc.textContent = weather.weather[0].description;
+        this.string.textContent = `${weather.main.temp} degrees F`;
 
-        this.humidity.textContent = `Relative Humidity ${weather.main.humidity}`;
-        // this.feelsLike.textContent = `Feels Like ${weather.main.feels_like}`;
-        this.dewpoint.textContent = `Dew Point ${weather.dewpoint_string}`;
-        this.wind.textContent = `Wind ${weather.wind.speed} mph`;
+        this.humidity.textContent = `Relative Humidity: ${weather.main.humidity}`;
+        this.feelsLike.textContent = `Feels Like: ${weather.main.feels_like} degrees F`;
+        this.dewpoint.textContent = `Dew Point: ${weather.dewpoint_string}`;
+        this.wind.textContent = `Wind: ${weather.wind.speed} mph`;
 
     }
 }
