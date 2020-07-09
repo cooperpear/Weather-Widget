@@ -14,7 +14,7 @@ class UI {
     paint(weather) {
         //API specific here
         this.location.textContent = weather.name;
-        // this.desc.textContent = weather.weather..description;
+        // this.desc.textContent = weather.weather.description;
         this.string.textContent = weather.main.temp;
 
         this.humidity.textContent = `Relative Humidity ${weather.main.humidity}`;
